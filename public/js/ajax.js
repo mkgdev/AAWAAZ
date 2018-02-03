@@ -9,13 +9,13 @@ $('.initiate').on('click', function () {
 
     ajaxRequest.done(function(data) {
 
-        alert('Registration was successful');
+console.log('Registration was successful');
 
     });
 
     ajaxRequest.fail(function(data) {
 
-        alert('Registration was unsuccessful. Try again!');
+        console.log('Registration was unsuccessful. Try again!');
     });
 
 });

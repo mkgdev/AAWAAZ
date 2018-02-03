@@ -13,7 +13,14 @@ router.get('/', function(req,res)
 
 router.post('/initiate', (req,res)=>{
 
-    PythonShell.run('AAWAAZ.py', function (err) {
+
+    var options={
+       
+        args:['-p', 'shape_predictor_68_face_landmarks.dat']
+    };
+
+
+    PythonShell.run('AAWAAZ.py',options, function (err) {
     if (err) throw err;
     console.log('finished');
 });

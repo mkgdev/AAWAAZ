@@ -13,7 +13,7 @@ router.get('/', function(req,res)
 
 router.post('/initiate', (req,res)=>{
 
-
+console.log('initiated');
     var options={
        
         args:['-p', 'shape_predictor_68_face_landmarks.dat']

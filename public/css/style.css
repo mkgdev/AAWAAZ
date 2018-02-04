@@ -968,10 +968,11 @@
 
 		#banner h2 {
 			color: #ffffff;
-			font-size: 3em;
+			font-size: 13em;
 			line-height: 1em;
-			margin: 0 0 0.5em 0;
+			margin: -126px 0px 9.5px 0;
 			padding: 0;
+			font-weight: 400;
 		}
 
 		#banner p {
@@ -1089,3 +1090,4 @@
 					margin-left: 0;
 					padding-left: 0;
 				}
+

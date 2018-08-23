@@ -18,6 +18,6 @@ It can be used to remove the communication gap between the abled and disabled on
 
 # Running the app
 ```
-Node server.js
+node server.js
 
 ```

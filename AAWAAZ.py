@@ -8,6 +8,8 @@ import imutils
 import time
 import dlib
 import cv2
+import pyttsx
+engine=pyttsx.init()
 
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import QTimer
@@ -16,7 +18,21 @@ from PyQt4.QtGui import QApplication
 import random
 import os.path
 
+def text_to_speech(word):
+    
 
+   # engine.say(word)
+    #engine.runAndWait()
+    # print(word)
+    newword=word.split(" ")
+    # print(newword)
+    # print(len(newword))
+    newValue=newword[len(newword)-2]
+    # print("#######")
+    # print(newValue)
+    # print("#######")
+    engine.say(newValue)
+    engine.runAndWait()
 
 #colourLoop constants
 #colourLoop constants
@@ -422,7 +438,11 @@ def tick():
                             if len(currentSentence) == 1:
                                 currentSentence = currentSentence.upper()
                         elif letRowCount == 5:
-                            row5[letColCount]()
+                            print(letColCount)
+
+                            row5[1]()
+
+#                            row5[letColCount+1]()
                         elif letRowCount == 6:
                             row6[letColCount]()
                         if ui.go:
@@ -582,12 +602,18 @@ class Ui_MainWindow(object):
         global currentSentence
         currentSentence=currentSentence[0:-1]
         self.textBrowser_4.setText(currentSentence)
-        
+    
+   
+
+
     def addSpace(self):
         global currentSentence
         currentSentence+=" "
+        #print(currentSentence)
+        text_to_speech(currentSentence)
         self.textBrowser_4.setText(currentSentence)
-        
+    
+    
 
 #######################################################3
 

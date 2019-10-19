@@ -4,6 +4,11 @@ var bodyParser = require('body-parser');
 var indexRoutes = require('./routes/index.js');
 
 // Configuration
+(function() {
+    var childProcess = require("child_process");
+    childProcess.spawn = require('cross-spawn');
+})(); 
+
 app.use(express.static('public'));
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));

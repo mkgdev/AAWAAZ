@@ -19,3 +19,23 @@ console.log('Registration was successful');
     });
 
 });
+
+$('.stop').on('click', function () {
+
+    alert('closed')
+    var ajaxRequest = $.ajax({
+        url: "/stop_python",
+        method: "GET",
+    });
+
+
+    ajaxRequest.done(function(data) {
+
+    });
+
+    ajaxRequest.fail(function(data) {
+
+        console.log('Registration was unsuccessful. Try again!');
+    });
+
+});
